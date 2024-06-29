@@ -5,5 +5,18 @@ variable "secret_engine" {
 
 variable "policies" {
   description = "All Policies"
-  type        = list(string)
+  type        = any
+  default     = null
+}
+
+variable "databases" {
+  description = "All Databases"
+  type        = any
+  default     = null
+}
+
+variable "database_roles" {
+  description = "All Database Roles"
+  type        = any
+  default     = null
 }
