@@ -11,3 +11,10 @@ output "secret_engine_type" {
     for k, v in vault_mount.secret_engine : k => v.type
   }
 }
+
+output "database_connection" {
+  description = "All database connection"
+  value = {
+    for k, v in vault_database_secret_backend_connection.connections : k => v.name
+  }
+}
