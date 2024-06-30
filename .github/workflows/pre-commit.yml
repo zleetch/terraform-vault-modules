@@ -18,7 +18,7 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
       -
         name: Get Root Dir
         id: dirs
@@ -45,7 +45,7 @@ jobs:
 
       - name: Terraform min/max versions
         id: minMax
-        uses: clowdhaus/terraform-min-max@v1.3.1
+        uses: clowdhaus/terraform-min-max@v1.3.0
         with:
           directory: ${{ matrix.directory }}
 
@@ -88,7 +88,7 @@ jobs:
 
       - name: Terraform min/max versions
         id: minMax
-        uses: clowdhaus/terraform-min-max@v1.3.1
+        uses: clowdhaus/terraform-min-max@v1.3.0
 
       - name: Pre-commit Terraform ${{ steps.minMax.outputs.maxVersion }}
         uses: clowdhaus/terraform-composite-actions/pre-commit@v1.9.0
