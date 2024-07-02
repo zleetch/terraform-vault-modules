@@ -115,7 +115,7 @@ resource "vault_database_secret_backend_connection" "connections" {
   }
 }
 
-resource "vault_database_secret_backend_role" "role" {
+resource "vault_database_secret_backend_role" "roles" {
   for_each              = var.database_roles
   backend               = vault_mount.secret_engine[each.value.backend].path
   name                  = each.value.name
@@ -128,4 +128,12 @@ resource "vault_database_secret_backend_role" "role" {
   max_ttl               = try(each.value.max_ttl, null)
   credential_type       = try(each.value.credential_type, null)
   credential_config     = try(each.value.credential_config, null)
+}
+
+resource "vault_database_secret_backend_static_role" "roles" {
+  for_each = var.database_static_roles
+  backend  = vault_mount.secret_engine[each.value.backend].path
+  name     = each.value.name
+  db_name  = vault_database_secret_backend_connection.connections[each.value.db_name].name
+  username = each.value.username
 }
