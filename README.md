@@ -19,7 +19,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [vault_database_secret_backend_connection.connections](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/database_secret_backend_connection) | resource |
-| [vault_database_secret_backend_role.role](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/database_secret_backend_role) | resource |
+| [vault_database_secret_backend_role.roles](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/database_secret_backend_role) | resource |
+| [vault_database_secret_backend_static_role.roles](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/database_secret_backend_static_role) | resource |
 | [vault_mount.secret_engine](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/mount) | resource |
 | [vault_policy.policies](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/policy) | resource |
 
@@ -28,6 +29,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_database_roles"></a> [database\_roles](#input\_database\_roles) | All Database Roles | `any` | `null` | no |
+| <a name="input_database_static_roles"></a> [database\_static\_roles](#input\_database\_static\_roles) | All Static Database Roles | `any` | `null` | no |
 | <a name="input_databases"></a> [databases](#input\_databases) | All Databases | `any` | `null` | no |
 | <a name="input_policies"></a> [policies](#input\_policies) | All Policies | `any` | `null` | no |
 | <a name="input_secret_engine"></a> [secret\_engine](#input\_secret\_engine) | Secret Engine | `any` | n/a | yes |
