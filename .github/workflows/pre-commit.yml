@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  TERRAFORM_DOCS_VERSION: v0.18.0 #https://github.com/terraform-docs/terraform-docs
-  TERRAFORM_LINTER_VERSION: v0.51.1 #https://github.com/terraform-linters/tflint
+  TERRAFORM_DOCS_VERSION: v0.16.0 #https://github.com/terraform-docs/terraform-docs
+  TERRAFORM_LINTER_VERSION: v0.50.3 #https://github.com/terraform-linters/tflint
 
 jobs:
   collectInputs:
