@@ -20,3 +20,9 @@ variable "database_roles" {
   type        = any
   default     = null
 }
+
+variable "database_static_roles" {
+  description = "All Static Database Roles"
+  type        = any
+  default     = null
+}
